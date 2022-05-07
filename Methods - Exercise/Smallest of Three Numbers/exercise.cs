@@ -1,8 +1,12 @@
-int smallestNum;
+int ReturnSmallestNum(int num1, int num2, int num3)
+{
+    int smallestNum = num1;
+    if(smallestNum > num2) smallestNum = num2;
+    if (smallestNum > num3) smallestNum = num3;
+    return smallestNum;
+}
+
 int num1 = int.Parse(Console.ReadLine());
-smallestNum = num1;
 int num2 = int.Parse(Console.ReadLine());
-if(smallestNum > num2) smallestNum = num2;
 int num3 = int.Parse(Console.ReadLine());
-if (smallestNum > num3) smallestNum = num3;
-Console.WriteLine(smallestNum);
+Console.WriteLine(ReturnSmallestNum(num1,num2,num3));
